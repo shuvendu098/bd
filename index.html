@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Happy Birthday Dinesh Sir!
+    </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #8bfbff;
+            padding: 50px;
+        }
+        .birthday-message {
+            background-color: #017566;
+            padding: 20px;
+            border-radius: 30px;
+            box-shadow: 0 0 10px rgba(255, 98, 98, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #ffffff;
+        }
+        p {
+            color: #ffffff;
+            font-size: 1.2em;
+        }
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin-top: 20px;
+            overflow: hidden;
+        }
+        .mySlides {
+            display: none;
+        }
+        .mySlides img {
+            width: 100%;
+        }
+        .text {
+            color: #ffffff;
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <audio id="birthdayAudio" autoplay loop>
+        <source src="audio.mp3" type="audio/ogg">
+    </audio>
+    <script>
+        var audio = document.getElementById('birthdayAudio');
+        audio.muted = true; 
+        window.onload = function() {
+            audio.muted = false;
+            audio.play();
+        };
+    </script>
+    <div class="birthday-message">
+        <h1>Happy Birthday, Dinesh Sir!</h1>
+        <p>Dear Sir,</p>
+        <p>Wishing you a day filled with happiness, laughter, and all the special things that you deserve!</p>
+        <p>Best wishes from the team Data Associate!</p>
+
+        <div class="slideshow-container">
+            <div class="mySlides">
+                <img src="img1.png" alt="Birthday Image 1">
+                <div class="text">"Count not the candles…see the lights they give. Count not the years, but the life you live." </div>
+            </div>
+            <div class="mySlides">
+                <img src="img2.png" alt="Birthday Image 2">
+                <div class="text">"May your birthday be the start of a year filled with good luck, good health, and much happiness."</div>
+            </div>
+            <div class="mySlides">
+                <img src="img3.png" alt="Birthday Image 3">
+                <div class="text">"Birthdays are a new start, a fresh beginning and a time to pursue new endeavors with new goals."</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex-1].style.display = "block";
+            setTimeout(showSlides, 3000); 
+        }
+    </script>
+</body>
+</html>
